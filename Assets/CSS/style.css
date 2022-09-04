@@ -15,9 +15,8 @@
 
 body {
   font-size: 15px;
-  font-family: 'Alata', sans-serif;
-  background-color: black;
-
+  /* font-family: 'Alata', sans-serif; */
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 img {
@@ -58,7 +57,7 @@ img {
 .main__menu ul li a {
   font-size: 16px;
   font-weight: normal;
-  color: #fff;
+  color: var(--White);
   display: block;
   margin-left: 50px;
   text-decoration: none;
@@ -66,7 +65,7 @@ img {
 }
 
 .main__menu ul li a:hover {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--White);
 } 
 
 .hero {
@@ -96,14 +95,50 @@ img {
 }
 
 .main__hero h1 {
-  border: 2px solid #fff;
+  border: 2px solid var(--White);
   padding: 20px 30px;
   display: inline-block;
   font-size: 60px;
   font-weight: 300;
   text-transform: uppercase;
   line-height: 1;
-  font-family: 'Josefin Sans', sans-serif;
-  color: #fff;
+  color: var(--White);
   letter-spacing: 5px;
 }
+
+.leader__main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.leader__linker {
+  position: relative;
+  z-index: 1;
+}
+
+.leader__desc {
+  position: absolute;
+  left: 40%;
+  bottom: 0%;
+  background-color: var(--White);
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  z-index: 2;
+}
+
+.leader__desc h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 50px;
+  color: var(--Black);
+  margin-bottom: 20px;
+}
+
+.leader__desc p {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Dark-Gray);
+  line-height: 2;
+}
+
