@@ -24,9 +24,12 @@ img {
 }
 
 .container {
-  width: 1115px;
+  max-width: 1115px;
   margin: 0 auto;
+  width: 100%;
 }
+
+/* HEADER MENU */
 
 .header__menu {
   position: absolute;
@@ -43,30 +46,33 @@ img {
   padding-top: 60px;
 }
 
-.main__menu ul {
+.main__menu ul, .footer__menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
 } 
 
-.main__menu ul li {
+.main__menu ul li, .footer__menu ul li {
   display: inline-block;
   position: relative;
 }
 
-.main__menu ul li a {
+.main__menu ul li a, .footer__menu ul li a {
   font-size: 16px;
+  font-family: 'Alata', sans-serif;
   font-weight: normal;
   color: var(--White);
   display: block;
-  margin-left: 50px;
+  margin-left: 35px;
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
 
-.main__menu ul li a:hover {
+.main__menu ul li a:hover, .footer__menu ul li a:hover {
   border-bottom: 1px solid var(--White);
 } 
+
+/* HERO */
 
 .hero {
   position: relative;
@@ -106,6 +112,8 @@ img {
   letter-spacing: 5px;
 }
 
+/* LEADER MAIN */
+
 .leader__main {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -142,6 +150,12 @@ img {
   color: var(--Dark-Gray);
   line-height: 2;
   text-align: left;
+}
+
+/* OUR CREATION */
+
+.our__creation {
+  padding-bottom: 150px;
 }
 
 .wrapper__head {
@@ -198,6 +212,12 @@ img {
   background-color: var(--Black);
   z-index: 0;
   opacity: .5;
+  transition: .3s;
+}
+
+.creation__box-feature:hover::after {
+  background-color: var(--White);
+  opacity: .7;
 }
 
 .creation__box-feature h3 {
@@ -211,5 +231,62 @@ img {
   font-weight: 300;
   line-height: 1;
 }
+
+.creation__box-feature:hover h3 {
+  color: var(--Black);
+  font-weight: 600;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--Black);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+}
+
+.footer__menu ul li a {
+  margin: 0;
+  margin-right:35px;
+}
+
+.footer__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__media ul {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.footer__media ul li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.footer__media ul li a img {
+  transform: scale(1);
+  transition: .4s;
+}
+
+.footer__media ul li a:hover img {
+  transform: scale(1.5);
+}
+
+.copyright p {
+  color: var(--White);
+  opacity: .6;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
 
 
