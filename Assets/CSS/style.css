@@ -46,18 +46,21 @@ img {
   padding-top: 60px;
 }
 
-.main__menu ul, .footer__menu ul {
+.main__menu ul, 
+.footer__menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
 } 
 
-.main__menu ul li, .footer__menu ul li {
+.main__menu ul li, 
+.footer__menu ul li {
   display: inline-block;
   position: relative;
 }
 
-.main__menu ul li a, .footer__menu ul li a {
+.main__menu ul li a, 
+.footer__menu ul li a {
   font-size: 16px;
   font-family: 'Alata', sans-serif;
   font-weight: normal;
@@ -68,9 +71,24 @@ img {
   border-bottom: 1px solid transparent;
 }
 
-.main__menu ul li a:hover, .footer__menu ul li a:hover {
+.main__menu ul li a:hover, 
+.footer__menu ul li a:hover {
   border-bottom: 1px solid var(--White);
 } 
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  background-color: var(--White);
+  display: block;
+  margin: 5px auto;
+  height: 3px;
+  width: 25px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
 
 /* HERO */
 
@@ -129,9 +147,7 @@ img {
   left: 45%;
   bottom: 0%;
   background-color: var(--White);
-  padding-top: 80px;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding: 80px 80px 0 80px;
   z-index: 2;
   text-align: left;
 }
@@ -288,5 +304,184 @@ img {
   margin-top: 20px;
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .leader__desc h2 {
+    font-size: 46px;
+  }
+
+  .leader__desc {
+    padding: 50px 50px 0 50px;
+  }
+
+  .creation__box {
+    margin-bottom: 20px;
+  }
+
+  .creation__box-feature {
+    margin-right: 20px;
+  }
+
+  .creation__box-feature:last-child {
+    margin-right: 0;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .leader__desc {
+    position: static;
+    left: 0;
+    padding: 40px 40px 0 40px;
+  }
+
+  .creation__box {
+    margin-bottom: 15px;
+  }
+
+  .creation__box-feature {
+    margin-right: 15px;
+  }
+  .creation__box-feature:last-child {
+    margin-right: 0;
+  }
+  .footer__menu ul li a {
+    margin-right: 20px;
+  }
+  
+}
+
+@media only screen and (max-width: 767px) {
+  section {
+    padding: 0 15px;
+  }
+  .header__menu {
+    width: -webkit-fill-available;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .main__menu nav ul {
+    position: fixed;
+    left: -100%;
+    top: 115px;
+    background-color: var(--Black);
+    width: 100%;
+    text-align: center;
+    transform: .3s;
+  
+  }
+  .main__menu nav ul.active {
+    left: 0;
+    padding: 30px 0;
+  }
+
+  .main__menu nav ul li,
+  .footer__menu ul li {
+    display: block;
+    margin-bottom: 25px;
+  }
+  .main__menu nav ul li:last-child{
+    margin-bottom: 0;
+  }
+  .main__menu nav ul li a,
+  .footer__menu ul li a {
+    border: none;
+    margin-left: 0;
+  }
+
+  .main__menu nav ul li a:hover,
+  .footer__menu ul li a:hover {
+    border-bottom: none;
+    color: royalblue;
+  }
+
+  .hero {
+    height: 500px;
+  }
+
+  .main__hero h1 {
+    padding: 20px 20px;
+    font-size: 36px;
+    letter-spacing: normal;
+    line-height: 1.2;
+  }
+
+  .leader__desc {
+    position:static;
+    padding: 20px 0 0 0;
+  }
+
+  .leader__desc h2 {
+    font-size: 35px;
+    display: inline-block;
+    text-align: center;
+  }
+  .leader__desc p {
+    display: inline-block;
+    text-align: justify;
+  }
+
+  .wrapper__head {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .creation__heading-top h2 {
+    font-size: 26px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .creation__box {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .creation__box-feature {
+    margin-bottom: 15px;
+  }
+
+  .footer__flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer__logo {
+    margin-bottom: 35px; 
+  }
+  .footer__menu ul li a{
+    margin-right: 0;
+    text-align: center;
+  }
+  .footer__right {
+    margin-top: 25px;
+  }
+
+  .footer__media ul {
+    text-align: left;
+    text-align: center;
+  }
+
+  .footer__media ul li:first-child {
+    margin-left: 0;
+  }
+}
 
 
